@@ -1,0 +1,50 @@
+{
+  "name": "@b-kub24/shared-stripe-billing",
+  "version": "1.0.0",
+  "description": "Drop-in Stripe billing module for Next.js + Supabase projects. Checkout, webhooks, pricing UI, customer portal, usage-based billing, and more.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./api/checkout": "./dist/api/checkout.js",
+    "./api/webhook": "./dist/api/webhook.js",
+    "./api/portal": "./dist/api/portal.js",
+    "./api/usage": "./dist/api/usage.js",
+    "./components/PricingPage": "./dist/components/PricingPage.js",
+    "./components/SubscriptionGate": "./dist/components/SubscriptionGate.js",
+    "./components/BillingDashboard": "./dist/components/BillingDashboard.js",
+    "./lib/stripe": "./dist/lib/stripe.js",
+    "./lib/supabase-billing": "./dist/lib/supabase-billing.js",
+    "./lib/config": "./dist/lib/config.js",
+    "./sql/migrations": "./src/sql/migrations.sql"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "next": "^14.0.0 || ^15.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "stripe": "^14.0.0 || ^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "stripe": "^16.0.0",
+    "typescript": "^5.5.0"
+  },
+  "keywords": ["stripe","billing","nextjs","supabase","subscriptions","payments","checkout","saas"],
+  "author": "b-kub24",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b-kub24/shared-stripe-billing.git"
+  }
+}
